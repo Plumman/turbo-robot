@@ -1,6 +1,7 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://localhost:8080');
+const userId = 'user123'; // Replace with the desired user ID
+const ws = new WebSocket(`ws://localhost:8080?userId=${userId}`);
 
 ws.on('open', () => {
   console.log('Connected to server');
